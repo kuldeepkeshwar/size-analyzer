@@ -31,9 +31,9 @@ export function drawGraph({
     .attr("y", PLOTY + AXIS.PADDING.Y)
     .attr("height", 0)
     .transition()
-    .duration(1500)
+    .duration(800)
     .delay(function(d, i) {
-      return i * 50;
+      return i * 20;
     })
     .attr("fill", d => barColorScale(d.size))
     .attr("y", (d, i) => yScale(d.size) + AXIS.PADDING.Y)

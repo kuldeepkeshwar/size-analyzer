@@ -26,10 +26,9 @@ export function drawXAxis({
   sizeColorScale,
   DIMENSION
 }) {
-  function circleX(d, i) {
-    const offset = sumTilIndex(sizes, i - 1) + i * gap;
-    const bars = offset + d.files.length / 2;
-    return xScale(bars);
+  function calculateX(d, i) {
+    const x = sumTilIndex(sizes, i - 1) + i * gap;
+    return xScale(x);
   }
   const xAxis = d3.axisBottom(xScale).ticks(0);
   const container = plot.append("g");
@@ -41,14 +40,15 @@ export function drawXAxis({
   container.append("g").call(xAxis);
   container
     .append("g")
-    .selectAll("circle")
+    .selectAll("rect")
     .data(sizes)
     .enter()
-    .append("circle")
-    .attr("r", 6)
-    .attr("cx", circleX)
-    .attr("cy", 15)
-    .style("fill", "black");
+    .append("rect")
+    .attr("height", 6)
+    .attr("width", d => xScale(d.files.length))
+    .attr("x", calculateX)
+    .attr("y", DIMENSION.AXIS.X.HEIGHT / 2)
+    .style("fill", d => sizeColorScale(d.timestamp));
   container
     .append("g")
     .selectAll("text")
@@ -62,7 +62,7 @@ export function drawXAxis({
       return _d.toLocaleString();
     })
     .attr("x", function(d, i) {
-      return circleX(d, i) - 45;
+      return calculateX(d, i);
     })
     .attr("y", DIMENSION.AXIS.X.HEIGHT)
     .style("fill", "black");

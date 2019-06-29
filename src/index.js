@@ -26,6 +26,7 @@ const sizeColorScale = createSizeColorScale({ sizes });
 
 const plot = d3.select("#root").append("svg");
 plot.attr("height", DIMENSION.HEIGHT).attr("width", DIMENSION.WIDTH);
+
 drawYAxis({ plot, DIMENSION, yScale });
 drawXAxis({
   plot,

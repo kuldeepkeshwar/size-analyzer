@@ -7,7 +7,16 @@ export function drawYAxis({ plot, DIMENSION, yScale }) {
     .axisLeft()
     .scale(yScale)
     .ticks(10, "s");
-  plot
+  const container = plot.append("g");
+
+  container
+    .append("text")
+    .style("text-anchor", "middle")
+    .attr("transform", "rotate(270)")
+    .attr("x", -1 * (DIMENSION.PADDING.TOP + DIMENSION.GRAPH.HEIGHT / 2))
+    .attr("y", DIMENSION.PADDING.LEFT - 5)
+    .text("Size");
+  container
     .append("g")
     .attr(
       "transform",
@@ -66,4 +75,10 @@ export function drawXAxis({
     })
     .attr("y", DIMENSION.AXIS.X.HEIGHT)
     .style("fill", "black");
+  container
+    .append("text")
+    .style("text-anchor", "middle")
+    .attr("x", DIMENSION.GRAPH.WIDTH / 2)
+    .attr("y", DIMENSION.AXIS.X.HEIGHT + 20)
+    .text("Time");
 }

@@ -10,41 +10,35 @@ import {
 } from "./scale";
 import { drawYAxis, drawXAxis } from "./axis";
 import { drawGraph } from "./graph";
-const [PLOTX, PLOTY] = [window.innerWidth - 80, window.innerHeight - 80];
+import { dimension } from "./dimension";
 
-const { files, sizes, gap, max: MAX } = nomaliseSizes(data);
+const DIMENSION = dimension();
 
-const AXIS = {
-  PADDING: { X: 30, Y: 10 }
-};
-const BAR = {
-  WIDTH: 0.9 * (PLOTX / files.length),
-  PADDING: 0.1 * (PLOTX / files.length)
-};
+const { files, sizes, gap, max } = nomaliseSizes(data);
 
-const yScale = createYScale({ PLOTY, MAX });
+const yScale = createYScale({ maxY: DIMENSION.GRAPH.HEIGHT, maxSize: max });
 const barColorScale = createBarColorScale();
-const xScale = createXScale({ PLOTX, files });
+const xScale = createXScale({
+  maxX: DIMENSION.GRAPH.WIDTH,
+  fileCount: files.length
+});
 const sizeColorScale = createSizeColorScale({ sizes });
 
 const plot = d3.select("#root").append("svg");
-drawGraph({
-  files,
-  plot,
-  PLOTX,
-  PLOTY,
-  BAR,
-  AXIS,
-  yScale,
-  barColorScale
-});
-drawYAxis({ plot, AXIS, yScale });
+plot.attr("height", DIMENSION.HEIGHT).attr("width", DIMENSION.WIDTH);
+drawYAxis({ plot, DIMENSION, yScale });
 drawXAxis({
   plot,
   sizes,
-  AXIS,
   gap,
-  PLOTY,
   xScale,
-  sizeColorScale
+  sizeColorScale,
+  DIMENSION
+});
+drawGraph({
+  files,
+  plot,
+  DIMENSION,
+  yScale,
+  barColorScale
 });

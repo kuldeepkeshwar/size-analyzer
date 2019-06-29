@@ -2,33 +2,44 @@ import * as d3 from "d3";
 
 import { sumTilIndex } from "./utils";
 
-export function drawYAxis({ plot, AXIS, yScale }) {
+export function drawYAxis({ plot, DIMENSION, yScale }) {
   const yAxis = d3
     .axisLeft()
     .scale(yScale)
     .ticks(10, "s");
   plot
     .append("g")
-    .attr("transform", `translate(${AXIS.PADDING.X},${AXIS.PADDING.Y})`)
+    .attr(
+      "transform",
+      `translate(${DIMENSION.PADDING.LEFT + DIMENSION.AXIS.Y.WIDTH},${
+        DIMENSION.PADDING.TOP
+      })`
+    )
     .call(yAxis);
 }
 
 export function drawXAxis({
   plot,
   sizes,
-  AXIS,
   gap,
-  PLOTY,
   xScale,
-  sizeColorScale
+  sizeColorScale,
+  DIMENSION
 }) {
   function circleX(d, i) {
     const offset = sumTilIndex(sizes, i - 1) + i * gap;
     const bars = offset + d.files.length / 2;
-    return AXIS.PADDING.X + xScale(bars);
+    return xScale(bars);
   }
   const xAxis = d3.axisBottom(xScale).ticks(0);
-  plot
+  const container = plot.append("g");
+  container.attr(
+    "transform",
+    `translate(${DIMENSION.PADDING.LEFT + DIMENSION.AXIS.Y.WIDTH},
+      ${DIMENSION.PADDING.TOP + DIMENSION.GRAPH.HEIGHT})`
+  );
+  container.append("g").call(xAxis);
+  container
     .append("g")
     .selectAll("circle")
     .data(sizes)
@@ -36,12 +47,9 @@ export function drawXAxis({
     .append("circle")
     .attr("r", 6)
     .attr("cx", circleX)
-    .attr("cy", PLOTY + AXIS.PADDING.Y + 10)
+    .attr("cy", 15)
     .style("fill", "black");
-  // .style("fill", function(d) {
-  //   return sizeColorScale(d.files.length);
-  // });
-  plot
+  container
     .append("g")
     .selectAll("text")
     .data(sizes)
@@ -54,12 +62,8 @@ export function drawXAxis({
       return _d.toLocaleString();
     })
     .attr("x", function(d, i) {
-      return circleX(d, i) + 8;
+      return circleX(d, i) - 45;
     })
-    .attr("y", PLOTY + AXIS.PADDING.Y + 13)
+    .attr("y", DIMENSION.AXIS.X.HEIGHT)
     .style("fill", "black");
-  plot
-    .append("g")
-    .attr("transform", `translate(${AXIS.PADDING.X},${PLOTY + AXIS.PADDING.Y})`)
-    .call(xAxis);
 }

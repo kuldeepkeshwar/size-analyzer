@@ -3,361 +3,57 @@
     "timestamp": 1561524834679,
     "files": [
       {
-        "filename": "static/0.1.7/pages/categories.js",
-        "previous": 2671,
-        "size": 0,
-        "diff": -2671
+        "filename": "a.js",
+        "size": 5000
       },
       {
-        "filename": "static/chunks/416d.d18509591d369db5afa9.js",
-        "previous": 27391,
-        "size": 27391,
-        "diff": 0
+        "filename": "b.js",
+        "size": 18000
       },
       {
-        "filename": "static/chunks/5648.941b27fef77cac097a7f.js",
-        "previous": 5479,
-        "size": 5479,
-        "diff": 0
+        "filename": "c.js",
+        "size": 120000
       },
       {
-        "filename": "static/runtime/webpack-43edcb470f8913cf446d.js",
-        "previous": 1497,
-        "size": 1497,
-        "diff": 0
+        "filename": "d.js",
+        "size": 80000
       },
       {
-        "filename": "static/chunks/928e.ccae70c31cd3ef53842c.js",
-        "previous": 14081,
-        "size": 14081,
-        "diff": 0
+        "filename": "e.js",
+        "size": 45000
       },
       {
-        "filename": "static/css/commons.7431b793.chunk.css",
-        "previous": 651,
-        "size": 651,
-        "diff": 0
-      },
-      {
-        "filename": "static/chunks/commons.184a374ce0f4dea9acd0.js",
-        "previous": 96931,
-        "size": 0,
-        "diff": -96931
-      },
-      {
-        "filename": "static/css/styles.7993ce3b.chunk.css",
-        "previous": 2351,
-        "size": 2351,
-        "diff": 0
-      },
-      {
-        "filename": "static/chunks/styles.7aea3a2f8298f3e89b9d.js",
-        "previous": 1387,
-        "size": 1387,
-        "diff": 0
-      },
-      {
-        "filename": "static/runtime/main-5702f3499a6bcdc618e6.js",
-        "previous": 6316,
-        "size": 6316,
-        "diff": 0
-      },
-      {
-        "filename": "static/0.1.7/pages/glance.js",
-        "previous": 1260,
-        "size": 0,
-        "diff": -1260
-      },
-      {
-        "filename": "static/0.1.7/pages/index.js",
-        "previous": 1069,
-        "size": 0,
-        "diff": -1069
-      },
-      {
-        "filename": "static/0.1.7/pages/_error.js",
-        "previous": 1103,
-        "size": 0,
-        "diff": -1103
-      },
-      {
-        "filename": "static/0.1.7/pages/_app.js",
-        "previous": 1891,
-        "size": 0,
-        "diff": -1891
-      },
-      {
-        "filename": "static/0.1.9/pages/categories.js",
-        "previous": 0,
-        "size": 2671,
-        "diff": 2671
-      },
-      {
-        "filename": "static/chunks/commons.dbebfa4154b9c27b60e9.js",
-        "previous": 0,
-        "size": 96941,
-        "diff": 96941
-      },
-      {
-        "filename": "static/0.1.9/pages/glance.js",
-        "previous": 0,
-        "size": 1260,
-        "diff": 1260
-      },
-      {
-        "filename": "static/0.1.9/pages/index.js",
-        "previous": 0,
-        "size": 1069,
-        "diff": 1069
-      },
-      {
-        "filename": "static/0.1.9/pages/_error.js",
-        "previous": 0,
-        "size": 1103,
-        "diff": 1103
-      },
-      {
-        "filename": "static/0.1.9/pages/_app.js",
-        "previous": 0,
-        "size": 1891,
-        "diff": 1891
+        "filename": "f.js",
+        "size": 35000
       }
     ]
   },
   {
-    "timestamp": 1560774823579,
+    "timestamp": 1561754973442,
     "files": [
       {
-        "filename": "static/0.1.7/pages/categories.js",
-        "previous": 0,
-        "size": 2671,
-        "diff": 2671
+        "filename": "a.js",
+        "size": 9000
       },
       {
-        "filename": "static/chunks/416d.d18509591d369db5afa9.js",
-        "previous": 0,
-        "size": 27391,
-        "diff": 27391
+        "filename": "b.js",
+        "size": 13000
       },
       {
-        "filename": "static/chunks/5648.941b27fef77cac097a7f.js",
-        "previous": 0,
-        "size": 5479,
-        "diff": 5479
+        "filename": "c.js",
+        "size": 90000
       },
       {
-        "filename": "static/runtime/webpack-43edcb470f8913cf446d.js",
-        "previous": 0,
-        "size": 1497,
-        "diff": 1497
+        "filename": "d.js",
+        "size": 98000
       },
       {
-        "filename": "static/chunks/928e.ccae70c31cd3ef53842c.js",
-        "previous": 0,
-        "size": 14081,
-        "diff": 14081
+        "filename": "e.js",
+        "size": 35000
       },
       {
-        "filename": "static/css/commons.7431b793.chunk.css",
-        "previous": 0,
-        "size": 651,
-        "diff": 651
-      },
-      {
-        "filename": "static/chunks/commons.184a374ce0f4dea9acd0.js",
-        "previous": 0,
-        "size": 96931,
-        "diff": 96931
-      },
-      {
-        "filename": "static/css/styles.7993ce3b.chunk.css",
-        "previous": 0,
-        "size": 2351,
-        "diff": 2351
-      },
-      {
-        "filename": "static/chunks/styles.7aea3a2f8298f3e89b9d.js",
-        "previous": 0,
-        "size": 1387,
-        "diff": 1387
-      },
-      {
-        "filename": "static/runtime/main-5702f3499a6bcdc618e6.js",
-        "previous": 0,
-        "size": 6316,
-        "diff": 6316
-      },
-      {
-        "filename": "static/0.1.7/pages/glance.js",
-        "previous": 0,
-        "size": 1260,
-        "diff": 1260
-      },
-      {
-        "filename": "static/0.1.7/pages/index.js",
-        "previous": 0,
-        "size": 1069,
-        "diff": 1069
-      },
-      {
-        "filename": "static/0.1.7/pages/_error.js",
-        "previous": 0,
-        "size": 1103,
-        "diff": 1103
-      },
-      {
-        "filename": "static/0.1.7/pages/_app.js",
-        "previous": 0,
-        "size": 1891,
-        "diff": 1891
-      }
-    ]
-  },
-  {
-    "timestamp": 1560774823579,
-    "files": [
-      {
-        "filename": "static/0.1.7/pages/categories.js",
-        "previous": 0,
-        "size": 2671,
-        "diff": 2671
-      },
-      {
-        "filename": "static/chunks/416d.d18509591d369db5afa9.js",
-        "previous": 0,
-        "size": 27391,
-        "diff": 27391
-      },
-      {
-        "filename": "static/chunks/5648.941b27fef77cac097a7f.js",
-        "previous": 0,
-        "size": 5479,
-        "diff": 5479
-      },
-      {
-        "filename": "static/runtime/webpack-43edcb470f8913cf446d.js",
-        "previous": 0,
-        "size": 1497,
-        "diff": 1497
-      },
-      {
-        "filename": "static/chunks/928e.ccae70c31cd3ef53842c.js",
-        "previous": 0,
-        "size": 14081,
-        "diff": 14081
-      },
-      {
-        "filename": "static/css/commons.7431b793.chunk.css",
-        "previous": 0,
-        "size": 651,
-        "diff": 651
-      },
-      {
-        "filename": "static/chunks/commons.184a374ce0f4dea9acd0.js",
-        "previous": 0,
-        "size": 96931,
-        "diff": 96931
-      },
-      {
-        "filename": "static/css/styles.7993ce3b.chunk.css",
-        "previous": 0,
-        "size": 2351,
-        "diff": 2351
-      },
-      {
-        "filename": "static/chunks/styles.7aea3a2f8298f3e89b9d.js",
-        "previous": 0,
-        "size": 1387,
-        "diff": 1387
-      },
-      {
-        "filename": "static/runtime/main-5702f3499a6bcdc618e6.js",
-        "previous": 0,
-        "size": 6316,
-        "diff": 6316
-      },
-      {
-        "filename": "static/0.1.7/pages/glance.js",
-        "previous": 0,
-        "size": 1260,
-        "diff": 1260
-      },
-      {
-        "filename": "static/0.1.7/pages/index.js",
-        "previous": 0,
-        "size": 1069,
-        "diff": 1069
-      },
-      {
-        "filename": "static/0.1.7/pages/_error.js",
-        "previous": 0,
-        "size": 1103,
-        "diff": 1103
-      },
-      {
-        "filename": "static/0.1.7/pages/_app.js",
-        "previous": 0,
-        "size": 1891,
-        "diff": 1891
-      }
-    ]
-  },
-  {
-    "timestamp": 1560774823579,
-    "files": [
-      {
-        "filename": "static/chunks/5648.941b27fef77cac097a7f.js",
-        "previous": 0,
-        "size": 5479,
-        "diff": 5479
-      },
-      {
-        "filename": "static/runtime/webpack-43edcb470f8913cf446d.js",
-        "previous": 0,
-        "size": 1497,
-        "diff": 1497
-      },
-      {
-        "filename": "static/chunks/928e.ccae70c31cd3ef53842c.js",
-        "previous": 0,
-        "size": 14081,
-        "diff": 14081
-      },
-      {
-        "filename": "static/css/commons.7431b793.chunk.css",
-        "previous": 0,
-        "size": 651,
-        "diff": 651
-      },
-      {
-        "filename": "static/chunks/commons.184a374ce0f4dea9acd0.js",
-        "previous": 0,
-        "size": 96931,
-        "diff": 96931
-      },
-      {
-        "filename": "static/css/styles.7993ce3b.chunk.css",
-        "previous": 0,
-        "size": 2351,
-        "diff": 2351
-      },
-      {
-        "filename": "static/chunks/styles.7aea3a2f8298f3e89b9d.js",
-        "previous": 0,
-        "size": 1387,
-        "diff": 1387
-      },
-      {
-        "filename": "static/runtime/main-5702f3499a6bcdc618e6.js",
-        "previous": 0,
-        "size": 6316,
-        "diff": 6316
-      },
-      {
-        "filename": "static/0.1.7/pages/glance.js",
-        "previous": 0,
-        "size": 1260,
-        "diff": 1260
+        "filename": "f.js",
+        "size": 56000
       }
     ]
   }

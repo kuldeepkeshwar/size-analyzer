@@ -1,9 +1,9 @@
 import * as d3 from "d3";
-export function createYScale({ PLOTY, MAX }) {
+export function createYScale({ maxY, maxSize }) {
   return d3
     .scaleLinear()
-    .domain([0, MAX])
-    .range([PLOTY, 0])
+    .domain([0, maxSize])
+    .range([maxY, 0])
     .nice();
 }
 export function createBarColorScale() {
@@ -13,11 +13,11 @@ export function createBarColorScale() {
     .range(["green", "cyan", "yellow", "red"]);
 }
 
-export function createXScale({ PLOTX, files }) {
+export function createXScale({ maxX, fileCount }) {
   return d3
     .scaleLinear()
-    .domain([0, files.length])
-    .range([0, PLOTX]);
+    .domain([0, fileCount])
+    .range([0, maxX]);
 }
 export function createSizeColorScale({ sizes }) {
   return d3

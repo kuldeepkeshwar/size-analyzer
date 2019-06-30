@@ -1,5 +1,5 @@
-export function dimension() {
-  const [width, height] = [window.innerWidth - 100, window.innerHeight - 100];
+export function dimension(width, height) {
+  //const [width, height] = [window.innerWidth, window.innerHeight];
   const PADDING = {
     TOP: 30,
     RIGHT: 30,

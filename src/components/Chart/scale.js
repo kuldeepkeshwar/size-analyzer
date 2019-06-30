@@ -1,4 +1,5 @@
 import * as d3 from "d3";
+const kilo = 1024;
 export function createYScale({ maxY, maxSize }) {
   return d3
     .scaleLinear()
@@ -9,7 +10,7 @@ export function createYScale({ maxY, maxSize }) {
 export function createBarColorScale() {
   return d3
     .scaleLinear()
-    .domain([0, 20 * 1024, 40 * 1024, 100 * 1024])
+    .domain([0, 20 * kilo, 40 * kilo, 100 * kilo])
     .range(["green", "cyan", "yellow", "red"]);
 }
 
@@ -22,6 +23,6 @@ export function createXScale({ maxX, fileCount }) {
 export function createSizeColorScale({ sizes }) {
   return d3
     .scaleQuantile()
-    .domain(sizes.map(size => size.files.length))
+    .domain(sizes.map(size => size.timestamp))
     .range(["lightblue", "orange", "lightgreen"]);
 }

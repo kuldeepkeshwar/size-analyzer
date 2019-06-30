@@ -1,45 +1,54 @@
+import React, { useEffect, useState } from "react";
+import ReactDOM from "react-dom";
 import "./styles.scss";
-import * as d3 from "d3";
 import data from "./size-plugin.json";
-import { nomaliseSizes } from "./utils";
-import {
-  createYScale,
-  createBarColorScale,
-  createSizeColorScale,
-  createXScale
-} from "./scale";
-import { drawYAxis, drawXAxis } from "./axis";
-import { drawGraph } from "./graph";
-import { dimension } from "./dimension";
+import Chart from "./components/Chart";
+import { datetoString } from "./utils";
+import SideBar from "./components/SideBar";
 
-const DIMENSION = dimension();
+const height = window.innerHeight - 100;
+const width = window.innerWidth - 100;
 
-const { files, sizes, gap, max } = nomaliseSizes(data);
-
-const yScale = createYScale({ maxY: DIMENSION.GRAPH.HEIGHT, maxSize: max });
-const barColorScale = createBarColorScale();
-const xScale = createXScale({
-  maxX: DIMENSION.GRAPH.WIDTH,
-  fileCount: files.length
-});
-const sizeColorScale = createSizeColorScale({ sizes });
-
-const plot = d3.select("#root").append("svg");
-plot.attr("height", DIMENSION.HEIGHT).attr("width", DIMENSION.WIDTH);
-
-drawYAxis({ plot, DIMENSION, yScale });
-drawXAxis({
-  plot,
-  sizes,
-  gap,
-  xScale,
-  sizeColorScale,
-  DIMENSION
-});
-drawGraph({
-  files,
-  plot,
-  DIMENSION,
-  yScale,
-  barColorScale
-});
+function App(props) {
+  const [sizes, setSize] = useState(props.sizes);
+  function toggleSize(s) {
+    setSize(
+      sizes.map(size => {
+        if (s === size) {
+          size.selected = !size.selected;
+        }
+        return size;
+      })
+    );
+  }
+  return (
+    <>
+      <SideBar>
+        <div>
+          <h3>Compare</h3>
+          {sizes.map(size => {
+            return (
+              <div
+                key={size.timestamp}
+                className="item"
+                onClick={() => toggleSize(size)}
+              >
+                <input type="checkbox" checked={size.selected} />
+                <span>{datetoString(size)}</span>
+              </div>
+            );
+          })}
+        </div>
+      </SideBar>
+      <Chart
+        sizes={sizes.filter(s => s.selected)}
+        height={height}
+        width={width}
+      />
+    </>
+  );
+}
+ReactDOM.render(
+  <App sizes={data.map(size => (size.selected = true && size))} />,
+  document.getElementById("root")
+);

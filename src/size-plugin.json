@@ -1,5 +1,64 @@
 [
   {
+    "timestamp": 1560000022668,
+    "files": [
+      {
+        "filename": "a.js",
+        "size": 2000
+      },
+      {
+        "filename": "b.js",
+        "size": 19000
+      },
+      {
+        "filename": "c.js",
+        "size": 68000
+      },
+      {
+        "filename": "d.js",
+        "size": 150000
+      },
+      {
+        "filename": "e.js",
+        "size": 55000
+      },
+      {
+        "filename": "f.js",
+        "size": 30000
+      }
+    ]
+  },
+
+  {
+    "timestamp": 1565000022668,
+    "files": [
+      {
+        "filename": "a.js",
+        "size": 2000
+      },
+      {
+        "filename": "b.js",
+        "size": 19000
+      },
+      {
+        "filename": "c.js",
+        "size": 68000
+      },
+      {
+        "filename": "d.js",
+        "size": 150000
+      },
+      {
+        "filename": "e.js",
+        "size": 55000
+      },
+      {
+        "filename": "f.js",
+        "size": 30000
+      }
+    ]
+  },
+  {
     "timestamp": 1561524834679,
     "files": [
       {
@@ -54,6 +113,35 @@
       {
         "filename": "f.js",
         "size": 56000
+      }
+    ]
+  },
+  {
+    "timestamp": 1561908422668,
+    "files": [
+      {
+        "filename": "a.js",
+        "size": 1000
+      },
+      {
+        "filename": "b.js",
+        "size": 18000
+      },
+      {
+        "filename": "c.js",
+        "size": 60000
+      },
+      {
+        "filename": "d.js",
+        "size": 180000
+      },
+      {
+        "filename": "e.js",
+        "size": 45000
+      },
+      {
+        "filename": "f.js",
+        "size": 40000
       }
     ]
   }

@@ -1,6 +1,6 @@
 import * as d3 from "d3";
 
-import { sumTilIndex } from "./utils";
+import { sumTilIndex, datetoString } from "./../../utils";
 
 export function drawYAxis({ plot, DIMENSION, yScale }) {
   const yAxis = d3
@@ -56,7 +56,7 @@ export function drawXAxis({
     .attr("height", 6)
     .attr("width", d => xScale(d.files.length))
     .attr("x", calculateX)
-    .attr("y", DIMENSION.AXIS.X.HEIGHT / 2)
+    .attr("y", DIMENSION.AXIS.X.HEIGHT / 5)
     .style("fill", d => sizeColorScale(d.timestamp));
   container
     .append("g")
@@ -65,20 +65,16 @@ export function drawXAxis({
     .enter()
     .append("text")
     .attr("font-size", 10)
-    .text(function(d) {
-      const _d = new Date();
-      _d.setTime(d.timestamp);
-      return _d.toLocaleString();
-    })
+    .text(datetoString)
     .attr("x", function(d, i) {
-      return calculateX(d, i);
+      return calculateX(d, i) + xScale(d.files.length) / 2 - 55;
     })
-    .attr("y", DIMENSION.AXIS.X.HEIGHT)
+    .attr("y", DIMENSION.AXIS.X.HEIGHT / 1.2)
     .style("fill", "black");
   container
     .append("text")
     .style("text-anchor", "middle")
     .attr("x", DIMENSION.GRAPH.WIDTH / 2)
-    .attr("y", DIMENSION.AXIS.X.HEIGHT + 20)
+    .attr("y", DIMENSION.AXIS.X.HEIGHT + 15)
     .text("Time");
 }

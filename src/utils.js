@@ -1,5 +1,5 @@
 export function max(arr, cb) {
-  let max = cb(arr[0]);
+  let max = cb(arr[0] || 0);
   arr.forEach(item => {
     const local = cb(item);
     if (max < local) {
@@ -26,4 +26,9 @@ export function sumTilIndex(arr, index) {
     sum = sum + arr[i].files.length;
   }
   return sum;
+}
+export function datetoString(d) {
+  const _d = new Date();
+  _d.setTime(d.timestamp);
+  return _d.toLocaleString();
 }

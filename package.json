@@ -9,10 +9,11 @@
     "d3-tip": "0.9.1",
     "react": "16.8.6",
     "react-dom": "16.8.6",
+    "react-ga": "^2.6.0",
     "react-scripts": "3.0.1"
   },
   "devDependencies": {
-    "node-sass":"latest",
+    "node-sass": "latest",
     "typescript": "3.3.3"
   },
   "scripts": {
@@ -21,5 +22,10 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

@@ -1,6 +1,6 @@
 name: CI
 
-on: [status]
+on: status
 
 jobs:
   build:
@@ -10,4 +10,4 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run a one-line script
-      run: echo github.event
+      run: echo ${{ github.event }}

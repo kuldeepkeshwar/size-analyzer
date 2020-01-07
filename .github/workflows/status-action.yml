@@ -1,6 +1,7 @@
 name: CI
-
-on: check_run
+on:
+  check_run:
+    types: [completed]
 
 jobs:
   build:

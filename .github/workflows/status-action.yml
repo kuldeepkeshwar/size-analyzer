@@ -12,5 +12,6 @@ jobs:
     - name: Run a one-line script
       env:
           GITHUB_CONTEXT: ${{ toJson(github.event) }}
+      if: github.event.context == 'netlify/size-analyzer/deploy-preview' && github.event.state == 'success'
       run: echo "$GITHUB_CONTEXT"
       
